@@ -13,3 +13,11 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
+
+
+mydb = client.get_database('event')
+records = mydb.kobkubkub
+
+def get_img():
+    for i in records.find({},{'_id': 0}):
+        return i
